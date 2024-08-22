@@ -12,7 +12,7 @@ public class SlotImpl implements Slot {
     private ItemStack item;
     private ActionHandler handler;
     
-    SlotImpl(int index) {
+    public SlotImpl(int index) {
         this.index = index;
     }
 
