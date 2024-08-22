@@ -32,6 +32,14 @@ public class VanillaHotbar implements Hotbar {
     }
 
     @Override
+    public void setSlot(int index, Slot slot) throws IllegalArgumentException {
+        if (index < 0 || index > 8) {
+            throw new IllegalArgumentException("index must be between 0-8");
+        }
+        slots[index] = slot;
+    }
+
+    @Override
     public Slot getSlot(int index) {
         if (index < 0 || index > 8) {
             throw new IllegalArgumentException("index must be between 0-8");

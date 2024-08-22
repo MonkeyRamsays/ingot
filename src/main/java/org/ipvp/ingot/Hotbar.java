@@ -14,6 +14,15 @@ public interface Hotbar {
      * @return The parent hotbar
      */
     Optional<Hotbar> getParent();
+
+    /**
+     * Sets the slot at a particular index in the Hotbar.
+     *
+     * @param index The index to set
+     * @return The slot at the given index
+     * @throws IllegalArgumentException If the slot provided is not between 0 and 8 (inclusive)
+     */
+    void setSlot(int index, Slot slot) throws IllegalArgumentException;
     
     /**
      * Returns a slot at a particular index in the Hotbar.
